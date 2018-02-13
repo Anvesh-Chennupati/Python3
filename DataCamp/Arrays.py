@@ -9,8 +9,11 @@ new_val = val[:]
 
 print(val * 2)
 
+print('\n')
+
 print(new_val)
 
+print('\n')
 np_val = np.array(val)
 
 np_val = np_val * 2
