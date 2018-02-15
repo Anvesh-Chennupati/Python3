@@ -21,3 +21,5 @@ np_val = np.array(val)
 np_val = np_val * 2
 
 print(np_val)
+
+print('\n My number is {} and my name is {}'.format(12,'Hello'))
