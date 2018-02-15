@@ -1,30 +1,17 @@
-# Create list baseball
-
-
-baseball = [180, 215, 210, 210, 188, 176, 209, 200]
-
-
-
-# Import the numpy package as np
-
+positions = ['gk','f','a','d','gk','gk','f','a','d']
+heights = [178,125,167,145,188,192,167,188,167]
 
 import numpy as np
 
+np_positions = np.array(positions)
+np_heights = np.array(heights)
+gk_heights = np.array(np_heights[np_positions=='gk'])
+other_height = np.array(np_heights[np_positions!= 'gk'])
+gk_mean = np.mean(gk_heights)
+other_mean = np.mean(other_height)
 
+if gk_mean > other_mean :
+    print('\n Goal Keepers mean height is greater than Other team players')
 
-# Create a numpy array from baseball: np_baseball
-
-
-
-
-np_baseball = np.array(baseball)
-
-
-
-
-# Print out type of np_baseball
-
-
-
-
-print(type(np_baseball))
+else :
+    print('\n Goal Keepers mean height is not greater than other team players')
