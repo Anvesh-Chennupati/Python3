@@ -47,3 +47,13 @@ print(df.drop('E',axis=0))
 df.drop('E',axis = 0,inplace=True)
 
 print(df)
+
+#selecting rows
+print(df.loc['A'])
+
+print(df.iloc[2])
+
+print(df.loc['B','Y'])
+
+
+print(df.loc[['A','B'],['W','Y']])
