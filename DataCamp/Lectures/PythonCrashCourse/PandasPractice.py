@@ -77,7 +77,6 @@ print(df)
 '''
 
 #Multilevel Indexing
-<<<<<<< HEAD
 
 outerIndex = 'G1 G1 G1 G1 G2 G2 G2 G2 G3 G3 G3 G3'.split()
 InnerIndex = [1,2,3,4,1,2,3,4,1,2,3,4]
@@ -91,5 +90,3 @@ print(df2.loc['G2'].iloc[0])
 
 df2.index.names= ['Groups','Numbers']
 print(df2)
-=======
->>>>>>> d03a21ff26aa417be16ea6df3aa323c2ff468baa
