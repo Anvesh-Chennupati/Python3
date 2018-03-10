@@ -22,3 +22,16 @@ print(data,'\n')
 #Thresh is minimum number of data the is not nan to be present in column/ row to be retained. axis = 0 is for rows , 1 is for columns
 
 #print(data.dropna(axis = 0, thresh=5))
+
+#print(data.fillna(value='Filling data'))
+for i in countries:
+    data.loc[i]= data.loc[i].fillna(value = data.loc[i].mean())
+
+'''
+data.loc['USA']= data.loc['USA'].fillna(value = data.loc['USA'].mean())
+data.loc['China']= data.loc['China'].fillna(value = data.loc['China'].mean())
+data.loc['Japan']= data.loc['Japan'].fillna(value = data.loc['Japan'].mean())
+data.loc['Russia']= data.loc['Russia'].fillna(value = data.loc['Russia'].mean())
+data.loc['Pakistan']= data.loc['Pakistan'].fillna(value = data.loc['Pakistan'].mean())
+'''
+print(data)
