@@ -77,3 +77,16 @@ print(df)
 '''
 
 #Multilevel Indexing
+
+outerIndex = 'G1 G1 G1 G1 G2 G2 G2 G2 G3 G3 G3 G3'.split()
+InnerIndex = [1,2,3,4,1,2,3,4,1,2,3,4]
+heirIndex = list(zip(outerIndex,InnerIndex))
+
+heirIndex = pd.MultiIndex.from_tuples(heirIndex)
+
+df2 = pd.DataFrame(np.random.randn(12,4),heirIndex,['A','B','C','D'])
+print(df2)
+print(df2.loc['G2'].iloc[0])
+
+df2.index.names= ['Groups','Numbers']
+print(df2)
