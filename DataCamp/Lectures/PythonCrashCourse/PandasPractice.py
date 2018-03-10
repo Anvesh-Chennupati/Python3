@@ -89,4 +89,7 @@ print(df2)
 print(df2.loc['G2'].iloc[0])
 
 df2.index.names= ['Groups','Numbers']
-print(df2)
+
+print(df2.loc['G3'].loc[2]['C'])
+
+print(df2.xs('G1')) #cross section xs()
