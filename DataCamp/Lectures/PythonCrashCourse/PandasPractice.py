@@ -20,6 +20,7 @@ print(pseries1 + pseries3)
 #DataFrames
 np.random.seed(1) #To keep the randn values same for all the runs
 df = pd.DataFrame(np.random.randn(5,4),['A','B','C','D','E'],['W','X','Y','Z'])
+'''
 print(df)
 print(df['W'])
 print(df[['W','Z']])
@@ -57,3 +58,18 @@ print(df.loc['B','Y'])
 
 
 print(df.loc[['A','B'],['W','Y']])
+
+print(df)
+print(df.loc['A'])
+print(df[(df['W']>0) & (df['Y'] > 1)])
+'''
+
+#print(df.reset_index())
+newind = 'CA NY WY OR CO'.split()
+df['States'] = newind
+
+print(df)
+
+df.set_index('States',inplace=True)
+
+print(df)
