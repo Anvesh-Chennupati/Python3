@@ -1,14 +1,16 @@
 #Creating a class
 
-class Mammals:
-    name = "Homosepians"
-
+class Snake:
+    def __init__(self,name,length):
+        self.name = name
+        self.length = length
     def changename(self,new_name):
         self.name = new_name
 
-human = Mammals()
+python = Snake("python",44)
+anaconda = Snake("anaconda",55)
 
-print(human.name)
-
-human.changename("Birds")
-print(human.name)
+print(python.name)
+print(python.length)
+print(anaconda.name)
+print(anaconda.length)
